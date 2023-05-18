@@ -25,6 +25,7 @@ setup(
         "dagster-postgres",
         "dbt-duckdb",
         "dbt-snowflake",
+        "dagster-cloud",
         "duckdb!=0.3.3, <= 6.0.0",  # missing wheels
         "mock",
         # DataFrames were not written to Snowflake, causing errors
