@@ -1,0 +1,6 @@
+locations:
+  - location_name: data-eng-pipeline
+    code_source:
+      package_name: project_fully_featured
+    build:
+      directory: ./
