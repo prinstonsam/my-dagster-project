@@ -25,11 +25,11 @@ recommender_assets = load_assets_from_package_module(
     package_module=recommender, group_name=RECOMMENDER
 )
 
-# dbt_assets = load_assets_from_dbt_manifest(
-#     json.load(open(os.path.join(DBT_PROJECT_DIR, "target", "manifest.json"), encoding="utf-8")),
-#     io_manager_key="warehouse_io_manager",
-#     # the schemas are already specified in dbt, so we don't need to also specify them in the key
-#     # prefix here
-#     key_prefix=["snowflake"],
-#     source_key_prefix=["snowflake"],
-# )
+dbt_assets = load_assets_from_dbt_manifest(
+    json.load(open(os.path.join(DBT_PROJECT_DIR, "target", "manifest.json"), encoding="utf-8")),
+    io_manager_key="warehouse_io_manager",
+    # the schemas are already specified in dbt, so we don't need to also specify them in the key
+    # prefix here
+    key_prefix=["snowflake"],
+    source_key_prefix=["snowflake"],
+)
